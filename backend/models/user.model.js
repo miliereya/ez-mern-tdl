@@ -14,7 +14,10 @@ const userSchema = new Schema({
         type: String,
         required: true,
         minlength: 3
-    },  
+    },
+    lightHash: {
+        type: String
+    }
 }, {
     timestamps: true
 })

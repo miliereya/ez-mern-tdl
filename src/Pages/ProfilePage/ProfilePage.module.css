@@ -1,0 +1,11 @@
+.userInfo {
+    font-size: 24px;
+}
+.userInfo span {
+    color: rgb(175, 104, 104);
+    font-weight: bold;
+}
+.btn {
+    width: 60px;
+    padding: 5px;
+}

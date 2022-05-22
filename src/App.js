@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { BreadCrumbs, NavBar} from './Components'
-import { MainPage, SignPage } from './Pages'
+import { LogPage, MainPage, ProfilePage, SignPage } from './Pages'
 import './index.css'
 
 function App() {
@@ -14,6 +14,8 @@ function App() {
           <Routes>
             <Route exact path='/' element={<MainPage />} />
             <Route path='/sign' element={<SignPage />} />
+            <Route path='/log' element={<LogPage />} />
+            <Route path='/profile' element={<ProfilePage />} />
           </Routes>
       </div>
     </div>

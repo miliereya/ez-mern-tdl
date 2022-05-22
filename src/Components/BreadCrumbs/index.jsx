@@ -6,7 +6,7 @@ export const BreadCrumbs = () => {
 
     return (
         <div className={s.wrapper}>
-            <h3>{location}</h3>
+            <h3>Path / {location}</h3>
         </div>
     )
 }
