@@ -20,31 +20,33 @@ export const SignPage = () => {
         }
     },[])
     useEffect(()=> {
-        const fetchData = async () => {
-            try {
-                const data = await userAPI.getUsers(username)
-                if(data.length !== 0) {
-                    setErr('This username is already taken!')
-                } else {
-                    const postData = async () => {
-                        try {
-                            const hash = await userAPI.createUser(user)
-                            localStorage.setItem("userHash", hash)
-                            nav('../tasks')
-                            window.location.reload()
-                            
-                        } catch (e) {
-                            console.log(e)
+        if(user.username!==undefined) {
+            const fetchData = async () => {
+                try {
+                    const data = await userAPI.getUsers(username)
+                    if(data.length !== 0) {
+                        setErr('This username is already taken!')
+                    } else {
+                        const postData = async () => {
+                            try {
+                                const hash = await userAPI.createUser(user)
+                                localStorage.setItem("userHash", hash)
+                                nav('../tasks')
+                                window.location.reload()
+                                
+                            } catch (e) {
+                                console.log(e)
+                            }
                         }
+                        postData()
                     }
-                    postData()
+                } catch (e) {
+                    console.log(e)
                 }
-            } catch (e) {
-                console.log(e)
+                
             }
-            
+            fetchData()
         }
-        fetchData()
     },[user])
 
     const userHandler = () => {

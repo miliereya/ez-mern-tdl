@@ -10,7 +10,7 @@ export const userAPI = {
         .then(res => res.data)
     },
     logByHash(hash) {
-        return axios.get(`http://localhost:5000/users/hashlog?lightHash=${hash}`)
+        return axios.get(`http://localhost:5000/users/hashlog?hash=${hash}`)
         .then(res => res.data)
     },
     log(user) {

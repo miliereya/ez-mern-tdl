@@ -29,7 +29,7 @@
  })
 
  router.route('/hashlog').get((req, res) => {
-    const lightHash = req.query.lightHash
+    const lightHash = req.query.hash
     User.find({lightHash})
         .then(user => res.json(user))
         .catch(err => res.status(400).json('Error ' + err))
@@ -43,8 +43,8 @@
     const salt = bcrypt.genSaltSync(10);
     const lightHash = bcrypt.hashSync(username, salt)
 
-    User.find({ username: username, password: password })
-        .then(user => res.json(lightHash))
+    User.find({ username, password })
+        .then(user => res.json(user))
         .catch(err => res.status(400).json('Error '+ err))
  })
 

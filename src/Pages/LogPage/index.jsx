@@ -23,10 +23,10 @@ export const LogPage = () => {
         if(username.length>2&&pass.length>2){
             const fetchData = async () => {
                 try {
-                    const userHash = await userAPI.log(user)
-                    console.log(userHash)
-                    if(userHash.length!==0){
-                        localStorage.setItem("userHash", userHash)
+                    const data = await userAPI.log(user)
+                    const hash = data[0].lightHash
+                    if(hash.length!==0){
+                        localStorage.setItem("userHash", hash)
                         nav('../tasks')
                         window.location.reload()
                     } else {

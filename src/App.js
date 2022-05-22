@@ -1,6 +1,6 @@
 import { Route, Routes } from 'react-router-dom'
 import { BreadCrumbs, NavBar} from './Components'
-import { LogPage, MainPage, ProfilePage, SignPage } from './Pages'
+import { AboutPage, LogPage, MainPage, ProfilePage, SignPage } from './Pages'
 import './index.css'
 
 function App() {
@@ -16,6 +16,7 @@ function App() {
             <Route path='/sign' element={<SignPage />} />
             <Route path='/log' element={<LogPage />} />
             <Route path='/profile' element={<ProfilePage />} />
+            <Route path='/about' element={<AboutPage />} />
           </Routes>
       </div>
     </div>

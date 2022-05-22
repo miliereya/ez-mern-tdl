@@ -38,9 +38,9 @@ export const NavBar = () => {
                     {username!=='' ? 'Profile: ' + username  : 'Sign Up'}
                 </NavLink>
                 <NavLink 
-                    className={s.link_me}
-                    to="me">
-                    Juice Wrld
+                    className={s.link}
+                    to="about">
+                    About
                 </NavLink>
             </div>
         </div>
