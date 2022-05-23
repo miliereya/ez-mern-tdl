@@ -1,8 +1,10 @@
 To start:
 
-npm install
+npm start
+--------
+cd ./backend
 
-Create .env file in /backend folder with code below
+nodemon server
 
-ATLAS_URI = 'Your mongo-atlas connection uri'
+
 
