@@ -20,10 +20,10 @@ connection.once('open', ()=> {
 })
 
 //Router(Навигация)
-const mernRouter = require('./routes/mern')
+const taskRouter = require('./routes/tasks')
 const usersRouter = require('./routes/users')   
 
-app.use('/mern', mernRouter)
+app.use('/tasks', taskRouter)
 app.use('/users', usersRouter)
 
 //Запуска приложения

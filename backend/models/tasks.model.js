@@ -2,15 +2,15 @@ const mongoose = require('mongoose')
 
 const Schema = mongoose.Schema
 
-const mernSchema = new Schema({
+const taskSchema = new Schema({
     username: { type: String, required: true},
+    task: {type: String, required: true},
     description: {type: String, required: true},
-    duration: {type: Number, required: true},
-    date: {type: Date, required: true}, 
+    date: {type: String, required: true}, 
 }, {
     timestamps: true
 })
 
-const Mern = mongoose.model('Mern', mernSchema)
+const Task = mongoose.model('Task', taskSchema)
 
-module.exports = Mern
+module.exports = Task
